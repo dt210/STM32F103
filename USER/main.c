@@ -9,7 +9,7 @@ int main(void)
 	u8 key=0;	
 	
 	delay_init();	    	//初始化延时函数	  
-	LED_Init();		//初始化LED
+	LED_Init();				//初始化LED
 	BEEP_Init();         	//初始化蜂鸣器
 	KEY_Init();         	//初始化按键
 	while(1)
