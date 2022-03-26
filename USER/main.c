@@ -8,24 +8,24 @@ int main(void)
 {
 	u8 key=0;	
 	
-	delay_init();	    	//³õÊ¼»¯ÑÓÊ±º¯Êı	  
-	LED_Init();		  		//³õÊ¼»¯LED
-	BEEP_Init();         	//³õÊ¼»¯·äÃùÆ÷
-	KEY_Init();         	//³õÊ¼»¯°´¼ü
+	delay_init();	    	//åˆå§‹åŒ–å»¶æ—¶å‡½æ•°	  
+	LED_Init();		//åˆå§‹åŒ–LED
+	BEEP_Init();         	//åˆå§‹åŒ–èœ‚é¸£å™¨
+	KEY_Init();         	//åˆå§‹åŒ–æŒ‰é”®
 	while(1)
 	{
- 		key=KEY_Scan(0);	//µÃµ½¼üÖµ
+ 		key=KEY_Scan(0);	//å¾—åˆ°é”®å€¼
 	   	if(key)
 		{						   
 			switch(key)
 			{				 
-				case WKUP_PRES:	//¿ØÖÆ·äÃùÆ÷
+				case WKUP_PRES:	//æ§åˆ¶èœ‚é¸£å™¨
 					LED0=!LED0;
 					break; 
-				case KEY1_PRES:	//¿ØÖÆLED1·­×ª	 
+				case KEY1_PRES:	//æ§åˆ¶LED1ç¿»è½¬	 
 					LED1=!LED1;
 					break;
-				case KEY0_PRES:	//Í¬Ê±¿ØÖÆLED0,LED1·­×ª 
+				case KEY0_PRES:	//åŒæ—¶æ§åˆ¶LED0,LED1ç¿»è½¬ 
 					
 					LED1=!LED1;
 					break;
