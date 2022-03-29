@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\KEY;..\HARDWARE\BEEP</IncludePath>
+              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\KEY;..\HARDWARE\BEEP;..\HARDWARE\MYUSTAR</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -417,6 +417,11 @@
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\KEY\key.c</FilePath>
             </File>
+            <File>
+              <FileName>myusart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\MYUSTAR\myusart.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -431,11 +436,6 @@
               <FileName>sys.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SYSTEM\sys\sys.c</FilePath>
-            </File>
-            <File>
-              <FileName>usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\SYSTEM\usart\usart.c</FilePath>
             </File>
           </Files>
         </Group>
