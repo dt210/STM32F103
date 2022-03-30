@@ -35,3 +35,4 @@
 ..\obj\main.o: ..\HARDWARE\KEY\key.h
 ..\obj\main.o: ..\HARDWARE\MYUSTAR\myusart.h
 ..\obj\main.o: D:\keil_v5\MDK\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: ..\HARDWARE\EXTI\exti.h

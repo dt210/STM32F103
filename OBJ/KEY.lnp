@@ -6,6 +6,7 @@
 "..\obj\beep.o"
 "..\obj\key.o"
 "..\obj\myusart.o"
+"..\obj\exti.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\core_cm3.o"
@@ -14,6 +15,7 @@
 "..\obj\stm32f10x_gpio.o"
 "..\obj\stm32f10x_rcc.o"
 "..\obj\stm32f10x_usart.o"
+"..\obj\stm32f10x_exti.o"
 --strict --scatter "..\OBJ\KEY.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
