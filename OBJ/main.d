@@ -36,3 +36,5 @@
 ..\obj\main.o: ..\HARDWARE\MYUSTAR\myusart.h
 ..\obj\main.o: D:\keil_v5\MDK\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\main.o: ..\HARDWARE\EXTI\exti.h
+..\obj\main.o: ..\HARDWARE\LOCK\lock.h
+..\obj\main.o: ..\HARDWARE\RS485\rs485.h

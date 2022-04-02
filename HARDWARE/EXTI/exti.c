@@ -3,7 +3,7 @@
 #include "key.h"
 #include "delay.h"
 #include "beep.h"
-
+#include "myusart.h"
 //******************************/
 //函数名称：外部中断初始化函数
 //入口参数：空
@@ -86,6 +86,7 @@ void EXTI4_IRQHandler(void)
 	{
 		LED0=!LED0;
 		LED1=!LED1; 
+		printf("AAAAAA");
 	}		 
 	EXTI_ClearITPendingBit(EXTI_Line4);  //清除LINE4上的中断标志位  
 }

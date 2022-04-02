@@ -34,3 +34,5 @@
 ..\obj\exti.o: ..\HARDWARE\KEY\key.h
 ..\obj\exti.o: ..\SYSTEM\delay\delay.h
 ..\obj\exti.o: ..\HARDWARE\BEEP\beep.h
+..\obj\exti.o: ..\HARDWARE\MYUSTAR\myusart.h
+..\obj\exti.o: D:\keil_v5\MDK\ARM\ARMCC\Bin\..\include\stdio.h

@@ -5,7 +5,8 @@
 #include "key.h"
 #include "myusart.h"
 #include "exti.h"
-
+#include "lock.h"
+#include "rs485.h"
 int main(void)
 {
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); //设置NVIC中断分组2:2位抢占优先级，2位响应优先级
@@ -15,12 +16,17 @@ int main(void)
 	KEY_Init();            	//初始化按键
 	myuart_init(9600);		//串口初始化为9600
 	EXTIX_Init();         	//初始化外部中断输入 
+	RS485_Init(9600);	//RS485初始化
 	while(1)
 	{
 	if (USART_RX_STA==0x8000)//接收到串口数据
 	{
 		USART_RX_STA=0;
-		if(USART_RX_BUF[0]==0xAA)	LED0=!LED0;
+		if(USART_RX_BUF[3]==0x11)	
+		{
+		LED0=!LED0;
+		k1();
+		}
 	}
 }		
 			
