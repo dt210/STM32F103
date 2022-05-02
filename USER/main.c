@@ -7,6 +7,8 @@
 #include "exti.h"
 #include "lock.h"
 #include "rs485.h"
+#include "oled.h"
+
 int main(void)
 {
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); //设置NVIC中断分组2:2位抢占优先级，2位响应优先级
@@ -17,15 +19,25 @@ int main(void)
 	myuart_init(9600);		//串口初始化为9600
 	EXTIX_Init();         	//初始化外部中断输入 
 	RS485_Init(9600);	//RS485初始化
+	OLED_Init();			//初始化OLED  
+	
+	OLED_ShowString(0,0,"OLED",16);//文本提示
+	OLED_Refresh_Gram();		//更新显示到OLED 
+	
 	while(1)
 	{
 	if (USART_RX_STA==0x8000)//接收到串口数据
 	{
 		USART_RX_STA=0;
-		if(USART_RX_BUF[3]==0x11)	
+		if(USART_RX_BUF[1]==0x01)	
 		{
-		LED0=!LED0;
-		k1();
+		LED0=0;
+		//k1();
+		}
+				if(USART_RX_BUF[1]==0x81)	
+		{
+		LED0=1;
+		//k1();
 		}
 	}
 }		

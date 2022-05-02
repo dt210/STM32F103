@@ -9,6 +9,7 @@
 "..\obj\exti.o"
 "..\obj\lock.o"
 "..\obj\rs485.o"
+"..\obj\oled.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\core_cm3.o"

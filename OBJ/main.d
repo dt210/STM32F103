@@ -38,3 +38,5 @@
 ..\obj\main.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\main.o: ..\HARDWARE\LOCK\lock.h
 ..\obj\main.o: ..\HARDWARE\RS485\rs485.h
+..\obj\main.o: ..\HARDWARE\OLED\oled.h
+..\obj\main.o: D:\keil_v5\MDK\ARM\ARMCC\Bin\..\include\stdlib.h
